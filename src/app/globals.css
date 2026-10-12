@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #071019;
+  --foreground: #f4f6fb;
+  --muted: #93a2bf;
+  --surface: #0d1726;
+  --surface-2: #132239;
+  --accent: #35d0ff;
+  --accent-2: #8af26b;
+  --accent-3: #ffbe5b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
+}
+
+.text-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+.noise-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(53, 208, 255, 0.08),
+      transparent 36%
+    ),
+    radial-gradient(circle at 80% 0%, rgba(138, 242, 107, 0.08), transparent 32%),
+    radial-gradient(circle at 60% 70%, rgba(255, 190, 91, 0.08), transparent 28%);
+  z-index: 0;
+}
+
+.grid-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-position: center;
+}
+
+.glass {
+  background: linear-gradient(
+    160deg,
+    rgba(19, 34, 57, 0.75),
+    rgba(13, 23, 38, 0.84)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.glow {
+  box-shadow: 0 0 60px rgba(53, 208, 255, 0.16);
 }

@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { NextRequest, NextResponse } from "next/server";
 import { generateHypotheses, validateHypothesis } from "@/lib/vertex-ai/hypothesis";
 import type { TopsisResult, Alternative, Criterion } from "@/lib/topsis/types";

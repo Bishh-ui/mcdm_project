@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { NextRequest, NextResponse } from "next/server";
 import { explainRanking, explainComparison, identifyBottleneck } from "@/lib/vertex-ai/explainer";
 import type { TopsisResult, Alternative, Criterion } from "@/lib/topsis/types";

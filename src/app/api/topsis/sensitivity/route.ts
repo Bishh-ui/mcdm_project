@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { NextRequest, NextResponse } from "next/server";
 import { runSensitivityAnalysis } from "@/lib/topsis/engine";
 import type { TopsisInput } from "@/lib/topsis";

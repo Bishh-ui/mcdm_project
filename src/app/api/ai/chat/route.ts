@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { NextRequest, NextResponse } from "next/server";
 import { chatWithDecisionData, suggestQuestions, type ChatMessage } from "@/lib/vertex-ai/chat";
 

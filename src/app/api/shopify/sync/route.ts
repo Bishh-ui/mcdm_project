@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { NextRequest, NextResponse } from "next/server";
 import { fetchProducts, fetchOrders, fetchLocations } from "@/lib/shopify/client";
 import { getDocument } from "@/lib/firebase/firestore";
